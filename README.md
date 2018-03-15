@@ -4,7 +4,7 @@ A Golang implementation to use myracloud api via console.
 
 ## Requirements
 - Dependencies via [glide](https://glide.sh/).
-- Building a packed binary requires [UPX(https://upx.github.io/).
+- Building a packed binary requires [UPX](https://upx.github.io/).
 - Make
 
 ## Getting started
