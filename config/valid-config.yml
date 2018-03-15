@@ -1,0 +1,8 @@
+endpoint: https://beta.myracloud.com
+language: en
+
+login:
+  -
+    user: blorenz
+    apikey: baf8f266841e469a521070e6e5ae18fe
+    secret: 839f661becf25c6691401b3329899ca3

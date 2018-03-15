@@ -1,0 +1,33 @@
+package command
+
+const (
+	// CommandCd ...
+	CommandCd = "cd"
+
+	// CommandClearCache ...
+	CommandClearCache = "clearCache"
+
+	// CommandLs ...
+	CommandLs = "ls"
+
+	//CommandDir ...
+	CommandDir = "dir"
+
+	// CommandHelp ...
+	CommandHelp = "help"
+
+	// CommandCreate ...
+	CommandCreate = "create"
+
+	// CommandEcho ...
+	CommandEcho = "echo"
+
+	// CommandRm ...
+	CommandRm = "rm"
+
+	// CommandCopy ...
+	CommandCopy = "cp"
+
+	// CommandWatch ...
+	CommandWatch = "watch"
+)

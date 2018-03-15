@@ -1,0 +1,17 @@
+package: myracloud.com/myra-shell
+import:
+- package: github.com/chzyer/readline
+  version: ^1.4.0
+- package: github.com/alexflint/go-arg
+- package: github.com/go-yaml/yaml
+- package: github.com/stretchr/testify
+  subpackages:
+  - assert
+- package: github.com/logrusorgru/aurora
+- package: github.com/danwakefield/fnmatch
+- package: github.com/funkygao/golib
+  subpackages:
+  - observer
+- package: gopkg.in/go-playground/validator.v9
+  version: ^9.5.0
+- package: github.com/nsf/termbox-go
