@@ -3,9 +3,9 @@ package api
 import (
 	"net/http"
 
+	auth "github.com/Myra-Security-GmbH/myra-shell/api/authentication"
+	"github.com/Myra-Security-GmbH/myra-shell/api/vo"
 	"gopkg.in/go-playground/validator.v9"
-	auth "myracloud.com/myra-shell/api/authentication"
-	"myracloud.com/myra-shell/api/vo"
 )
 
 //

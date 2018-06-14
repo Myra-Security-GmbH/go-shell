@@ -1,6 +1,6 @@
 package listing
 
-import "myracloud.com/myra-shell/api/types"
+import "github.com/Myra-Security-GmbH/myra-shell/api/types"
 
 type genericRow struct {
 	name           string

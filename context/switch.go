@@ -3,7 +3,7 @@ package context
 import (
 	"errors"
 
-	"myracloud.com/myra-shell/storage"
+	"github.com/Myra-Security-GmbH/myra-shell/storage"
 )
 
 //

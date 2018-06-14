@@ -3,7 +3,7 @@ package listing
 import (
 	"strconv"
 
-	"myracloud.com/myra-shell/api/vo"
+	"github.com/Myra-Security-GmbH/myra-shell/api/vo"
 )
 
 type ipfilterrow struct {

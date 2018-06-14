@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"myracloud.com/myra-shell/api/vo"
-	"myracloud.com/myra-shell/command"
-	"myracloud.com/myra-shell/command/impl/listing"
-	"myracloud.com/myra-shell/context"
-	"myracloud.com/myra-shell/util"
+	"github.com/Myra-Security-GmbH/myra-shell/api/vo"
+	"github.com/Myra-Security-GmbH/myra-shell/command"
+	"github.com/Myra-Security-GmbH/myra-shell/command/impl/listing"
+	"github.com/Myra-Security-GmbH/myra-shell/context"
+	"github.com/Myra-Security-GmbH/myra-shell/util"
 )
 
 //

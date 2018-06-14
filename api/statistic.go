@@ -3,8 +3,8 @@ package api
 import (
 	"net/http"
 
-	"myracloud.com/myra-shell/api/types"
-	"myracloud.com/myra-shell/api/vo"
+	"github.com/Myra-Security-GmbH/myra-shell/api/types"
+	"github.com/Myra-Security-GmbH/myra-shell/api/vo"
 )
 
 //

@@ -3,8 +3,8 @@ package command
 import (
 	"errors"
 
-	"myracloud.com/myra-shell/container"
-	"myracloud.com/myra-shell/context"
+	"github.com/Myra-Security-GmbH/myra-shell/container"
+	"github.com/Myra-Security-GmbH/myra-shell/context"
 
 	"github.com/chzyer/readline"
 )

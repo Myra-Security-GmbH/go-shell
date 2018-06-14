@@ -1,7 +1,7 @@
 package command
 
 import (
-	"myracloud.com/myra-shell/context"
+	"github.com/Myra-Security-GmbH/myra-shell/context"
 )
 
 //

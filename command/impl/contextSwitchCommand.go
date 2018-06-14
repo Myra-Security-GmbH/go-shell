@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"myracloud.com/myra-shell/api/vo"
-	"myracloud.com/myra-shell/command"
-	"myracloud.com/myra-shell/console"
-	"myracloud.com/myra-shell/context"
+	"github.com/Myra-Security-GmbH/myra-shell/api/vo"
+	"github.com/Myra-Security-GmbH/myra-shell/command"
+	"github.com/Myra-Security-GmbH/myra-shell/console"
+	"github.com/Myra-Security-GmbH/myra-shell/context"
 )
 
 //

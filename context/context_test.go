@@ -5,7 +5,7 @@ package context
 import (
 	"testing"
 
-	"myracloud.com/myra-shell/event"
+	"github.com/Myra-Security-GmbH/myra-shell/event"
 
 	"github.com/stretchr/testify/require"
 )

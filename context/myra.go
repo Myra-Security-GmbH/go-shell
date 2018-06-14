@@ -3,7 +3,7 @@ package context
 import (
 	"fmt"
 
-	"myracloud.com/myra-shell/storage"
+	"github.com/Myra-Security-GmbH/myra-shell/storage"
 
 	"github.com/logrusorgru/aurora"
 )

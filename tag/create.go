@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"myracloud.com/myra-shell/output"
+	"github.com/Myra-Security-GmbH/myra-shell/output"
 )
 
 //

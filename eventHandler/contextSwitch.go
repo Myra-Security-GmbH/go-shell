@@ -3,10 +3,10 @@ package eventHandler
 import (
 	"errors"
 
-	"myracloud.com/myra-shell/config"
-	"myracloud.com/myra-shell/container"
-	"myracloud.com/myra-shell/context"
-	"myracloud.com/myra-shell/event"
+	"github.com/Myra-Security-GmbH/myra-shell/config"
+	"github.com/Myra-Security-GmbH/myra-shell/container"
+	"github.com/Myra-Security-GmbH/myra-shell/context"
+	"github.com/Myra-Security-GmbH/myra-shell/event"
 )
 
 //

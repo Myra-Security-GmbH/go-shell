@@ -1,6 +1,6 @@
 package listing
 
-import "myracloud.com/myra-shell/console"
+import "github.com/Myra-Security-GmbH/myra-shell/console"
 
 type loginRow struct {
 	data console.Login

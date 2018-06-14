@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"time"
 
-	"myracloud.com/myra-shell/api/vo"
+	"github.com/Myra-Security-GmbH/myra-shell/api/vo"
 )
 
 func (a *myraAPI) request(method string, url string, obj interface{}) (*http.Response, error) {

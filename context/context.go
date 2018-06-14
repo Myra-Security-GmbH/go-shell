@@ -3,9 +3,9 @@ package context
 import (
 	"fmt"
 
-	"myracloud.com/myra-shell/api"
-	"myracloud.com/myra-shell/event"
-	"myracloud.com/myra-shell/storage"
+	"github.com/Myra-Security-GmbH/myra-shell/api"
+	"github.com/Myra-Security-GmbH/myra-shell/event"
+	"github.com/Myra-Security-GmbH/myra-shell/storage"
 )
 
 //

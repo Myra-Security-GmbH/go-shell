@@ -9,11 +9,11 @@ import (
 	"strconv"
 	"strings"
 
-	"myracloud.com/myra-shell/api/vo"
-	"myracloud.com/myra-shell/command"
-	"myracloud.com/myra-shell/context"
-	"myracloud.com/myra-shell/tag"
-	"myracloud.com/myra-shell/util"
+	"github.com/Myra-Security-GmbH/myra-shell/api/vo"
+	"github.com/Myra-Security-GmbH/myra-shell/command"
+	"github.com/Myra-Security-GmbH/myra-shell/context"
+	"github.com/Myra-Security-GmbH/myra-shell/tag"
+	"github.com/Myra-Security-GmbH/myra-shell/util"
 )
 
 //

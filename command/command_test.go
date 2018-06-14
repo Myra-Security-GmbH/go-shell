@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"testing"
 
-	"myracloud.com/myra-shell/context"
+	"github.com/Myra-Security-GmbH/myra-shell/context"
 
 	"github.com/stretchr/testify/require"
 )

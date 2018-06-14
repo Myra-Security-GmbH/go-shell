@@ -7,10 +7,10 @@ import (
 	"github.com/danwakefield/fnmatch"
 	"github.com/logrusorgru/aurora"
 
-	"myracloud.com/myra-shell/api/types"
-	"myracloud.com/myra-shell/command"
-	"myracloud.com/myra-shell/console"
-	"myracloud.com/myra-shell/context"
+	"github.com/Myra-Security-GmbH/myra-shell/api/types"
+	"github.com/Myra-Security-GmbH/myra-shell/command"
+	"github.com/Myra-Security-GmbH/myra-shell/console"
+	"github.com/Myra-Security-GmbH/myra-shell/context"
 )
 
 //

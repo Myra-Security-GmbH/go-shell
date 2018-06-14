@@ -7,19 +7,19 @@ import (
 	"os"
 	"strings"
 
+	"github.com/Myra-Security-GmbH/myra-shell/api"
+	"github.com/Myra-Security-GmbH/myra-shell/command"
+	_ "github.com/Myra-Security-GmbH/myra-shell/command/impl"
+	"github.com/Myra-Security-GmbH/myra-shell/console"
+	"github.com/Myra-Security-GmbH/myra-shell/container"
+	"github.com/Myra-Security-GmbH/myra-shell/context"
+	"github.com/Myra-Security-GmbH/myra-shell/eventHandler"
+	"github.com/Myra-Security-GmbH/myra-shell/output"
+	"github.com/Myra-Security-GmbH/myra-shell/util"
+
+	config "github.com/Myra-Security-GmbH/myra-shell/config"
 	arg "github.com/alexflint/go-arg"
 	"github.com/chzyer/readline"
-	"myracloud.com/myra-shell/api"
-	"myracloud.com/myra-shell/command"
-	config "myracloud.com/myra-shell/config"
-	"myracloud.com/myra-shell/console"
-	"myracloud.com/myra-shell/container"
-	"myracloud.com/myra-shell/context"
-	"myracloud.com/myra-shell/eventHandler"
-	"myracloud.com/myra-shell/output"
-	"myracloud.com/myra-shell/util"
-
-	_ "myracloud.com/myra-shell/command/impl"
 )
 
 var args struct {

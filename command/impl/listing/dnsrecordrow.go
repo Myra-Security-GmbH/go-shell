@@ -3,8 +3,8 @@ package listing
 import (
 	"strconv"
 
-	"myracloud.com/myra-shell/api/vo"
-	"myracloud.com/myra-shell/util"
+	"github.com/Myra-Security-GmbH/myra-shell/api/vo"
+	"github.com/Myra-Security-GmbH/myra-shell/util"
 )
 
 type dnsrecordrow struct {

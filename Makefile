@@ -3,12 +3,24 @@ GOPATH ?= /data
 GO      = go
 GOLINT  = $(GOPATH)/bin/gometalinter
 
-$(TARGET): clean
+GLIDE_VERSION := $(shell glide --version 2>/dev/null)
+DEP_VERSION := $(shell dep version 2>/dev/null)
+
+$(TARGET): clean vendor
 	$(GO) build -ldflags="-s -w" -o $@
 	upx --brute $@
 
-debug: clean
+debug: clean vendor
 	$(GO) build -gcflags '-N -l'
+
+vendor:
+ifdef DEP_VERSION
+	dep ensure
+else ifdef GLIDE_VERSION
+	glide install
+else
+	go get .
+endif
 
 clean:
 	rm -f $(TARGET)

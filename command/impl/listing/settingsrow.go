@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"myracloud.com/myra-shell/api/types"
+	"github.com/Myra-Security-GmbH/myra-shell/api/types"
 )
 
 type settingsRow struct {

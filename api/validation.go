@@ -3,8 +3,8 @@ package api
 import (
 	"fmt"
 
+	"github.com/Myra-Security-GmbH/myra-shell/api/vo"
 	validator "gopkg.in/go-playground/validator.v9"
-	"myracloud.com/myra-shell/api/vo"
 )
 
 //
