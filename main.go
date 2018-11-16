@@ -79,7 +79,7 @@ func createTemplateConfiguration() {
 	os.Exit(0)
 }
 
-func readAvailableLogins(cfg *config.Config, ctx context.Context) {
+func readAvailableLogins(ctx context.Context, cfg *config.Config) {
 	// stat, _ := os.Stdin.Stat()
 	// isNonInterface := (stat.Mode()&os.ModeCharDevice == 0)
 
@@ -151,7 +151,7 @@ func main() {
 	container.RegisterService("context", ctx)
 	container.RegisterService("api", connector)
 
-	readAvailableLogins(cfg, ctx)
+	readAvailableLogins(ctx, cfg)
 	l.Config.AutoComplete = command.BuildCompleter()
 
 	var returnValue uint
