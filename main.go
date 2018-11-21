@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"io"
 	"log"
@@ -41,27 +42,32 @@ func defineDefaults() {
 		homePath + "/config.yml",
 	})
 
+	if len(args.Configfile) == 0 {
+		args.Configfile = "./config.yml"
+	}
+
 	args.historyFile = homePath + "/.myra-shell-history"
 }
 
-func createTemplateConfiguration() {
+func createTemplateConfiguration() error {
 	_, err := os.Stat(args.Configfile)
 
 	if err == nil {
-		fmt.Println("File already exists")
-
-		os.Exit(1)
+		return nil
 	}
 
 	fmt.Println("Creating config file")
+
+	username, apiKey, secret := promptCredentials()
+
 	cfg := &config.Config{
 		Endpoint: "https://api.myracloud.com",
 		Language: "de",
 		Login: []config.User{
 			config.User{
-				APIKey: "apiKey",
-				Secret: "secret",
-				User:   "username",
+				APIKey: apiKey,
+				Secret: secret,
+				User:   username,
 			},
 		},
 	}
@@ -69,14 +75,27 @@ func createTemplateConfiguration() {
 	err = config.SaveConfigFile(args.Configfile, cfg)
 
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		return err
 	}
 
-	fmt.Println("Config file successfully created")
-	fmt.Println(": " + args.Configfile)
+	fmt.Printf("Config file %s successfully created\n", args.Configfile)
+	return nil
+}
 
-	os.Exit(0)
+func promptCredentials() (string, string, string) {
+	fmt.Print("Username: ")
+	username := bufio.NewScanner(os.Stdin)
+	username.Scan()
+
+	fmt.Print("API-Key: ")
+	apiKey := bufio.NewScanner(os.Stdin)
+	apiKey.Scan()
+
+	fmt.Print("Secret: ")
+	secret := bufio.NewScanner(os.Stdin)
+	secret.Scan()
+
+	return username.Text(), apiKey.Text(), secret.Text()
 }
 
 func readAvailableLogins(ctx context.Context, cfg *config.Config) {
@@ -109,15 +128,31 @@ func main() {
 	arg.MustParse(&args)
 
 	if args.Init {
-		createTemplateConfiguration()
+		err := createTemplateConfiguration()
+		if err != nil {
+			fmt.Println(err)
+			os.Exit(1)
+		}
 	}
 
 	cfg, err := config.ReadConfigFile(args.Configfile)
-
 	if err != nil {
-		fmt.Printf("Error reading config file [%s]", args.Configfile)
-		fmt.Println(err)
-		os.Exit(1)
+		if os.IsNotExist(err) {
+			err = createTemplateConfiguration()
+			if err != nil {
+				fmt.Println(err)
+				os.Exit(1)
+			}
+			cfg, err = config.ReadConfigFile(args.Configfile)
+			if err != nil {
+				fmt.Println(err)
+				os.Exit(1)
+			}
+		} else {
+			fmt.Printf("Error reading config file [%s]", args.Configfile)
+			fmt.Println(err)
+			os.Exit(1)
+		}
 	}
 
 	container.RegisterService("config", cfg)
