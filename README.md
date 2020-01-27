@@ -1,6 +1,6 @@
 # myra-shell
 
-A Golang implementation to use myracloud api via console.
+A Golang implementation to use Myra's API via console.
 
 ## Requirements
 - make
@@ -24,9 +24,7 @@ make build
 ```
 ./myra-shell
 ```
-Running myra-shell for the first time, it will ask for your Myra-API credentials.
+Running myra-shell for the first time, it will ask for your Myra API credentials.
 
 ## Status
-Currently not all myracloud api's or options can be accessed via myra-shell.
-
-Work in progress.
+Currently not all Myra API's or options can be accessed via myra-shell.
