@@ -8,10 +8,6 @@ A Golang implementation to use Myra's API via console.
 
 ## Getting started
 
-- Run test
-```
-make test
-```
 - Build
 ```
 # Generates a static compiled packed executable
@@ -20,6 +16,12 @@ make
 # Alternative creates a static compiled nonpacked executable
 make build
 ```
+
+- Run test
+```
+make test
+```
+
 - Run
 ```
 ./myra-shell
