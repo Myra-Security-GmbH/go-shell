@@ -24,10 +24,10 @@ import (
 )
 
 var args struct {
-	Configfile string `arg:"-c,help:Configfile to use"`
-	Init       bool   `arg:"--init,help:Creates a default configuration file"`
+	Configfile string `arg:"-c" help:"Configfile to use"`
+	Init       bool   `arg:"--init" help:"Creates a default configuration file"`
 
-	historyFile string
+	HistoryFile string
 }
 
 func defineDefaults() {
@@ -46,7 +46,7 @@ func defineDefaults() {
 		args.Configfile = "./config.yml"
 	}
 
-	args.historyFile = homePath + "/.myra-shell-history"
+	args.HistoryFile = homePath + "/.myra-shell-history"
 }
 
 func createTemplateConfiguration() error {
@@ -159,7 +159,7 @@ func main() {
 
 	l, err := readline.NewEx(&readline.Config{
 		Prompt:                 "",
-		HistoryFile:            args.historyFile,
+		HistoryFile:            args.HistoryFile,
 		InterruptPrompt:        "^C",
 		EOFPrompt:              "exit",
 		DisableAutoSaveHistory: true,
